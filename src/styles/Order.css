@@ -1,0 +1,148 @@
+/* src/styles/Order.css */
+
+.order-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(149, 157, 165, 0.2);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.order-container h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+/* --- Stepper Styles --- */
+.stepper-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+/* The connecting line */
+.stepper-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  height: 2px;
+  width: 100%;
+  background-color: #e0e0e0;
+  z-index: 1;
+}
+
+.stepper-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 2; /* Puts the circle above the line */
+  text-align: center;
+}
+
+.step-counter {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  border: 2px solid #e0e0e0;
+  display: grid;
+  place-items: center;
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #999;
+  transition: all 0.3s ease;
+}
+
+.step-name {
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 8px;
+}
+
+/* Active Step Styling */
+.stepper-item.active .step-counter {
+  border-color: #007BFF;
+  background-color: #007BFF;
+  color: #ffffff;
+}
+.stepper-item.active .step-name {
+  color: #007BFF;
+  font-weight: bold;
+}
+
+/* Completed Step Styling */
+.stepper-item.completed .step-counter {
+  border-color: #28a745;
+  background-color: #28a745;
+  color: #ffffff;
+  font-size: 1.5rem; /* For the checkmark */
+}
+.stepper-item.completed .step-name {
+  color: #333;
+}
+
+/* --- Content & Button Styles --- */
+.step-content {
+  background-color: #f9f9f9;
+  border: 1px solid #e0e0e0;
+  padding: 40px;
+  border-radius: 8px;
+  min-height: 150px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.step-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.step-buttons button {
+  padding: 12px 28px;
+  font-size: 1rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #007BFF;
+  color: #ffffff;
+}
+.btn-primary:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+}
+
+.btn-secondary {
+  background-color: #f0f0f0;
+  color: #333;
+  border: 1px solid #ccc;
+}
+.btn-secondary:hover {
+  background-color: #e0e0e0;
+  border-color: #bbb;
+}
+
+.step-buttons button:disabled {
+  background-color: #e9ecef;
+  color: #6c757d;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+  border-color: #e9ecef;
+}

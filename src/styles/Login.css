@@ -1,0 +1,101 @@
+/* src/styles/Login.css */
+
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh; /* Adjust as needed */
+  background-color: #f4f7f6;
+  padding: 40px 20px;
+}
+
+.auth-form-card {
+  width: 100%;
+  max-width: 420px;
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.form-title {
+  margin-bottom: 30px;
+  color: #333;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #555;
+}
+
+.form-input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #007BFF;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.2);
+}
+
+.btn-submit {
+  width: 100%;
+  padding: 14px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  margin-top: 10px;
+}
+
+.btn-submit:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+.toggle-text {
+  margin-top: 25px;
+  color: #666;
+}
+
+.toggle-link {
+  color: #007BFF;
+  font-weight: bold;
+  cursor: pointer;
+  transition: text-decoration 0.3s;
+}
+
+.toggle-link:hover {
+  text-decoration: underline;
+}
+
+/* Add this to src/styles/Login.css */
+
+.form-row {
+  display: flex;
+  gap: 20px; /* Creates space between the fields */
+}
+
+/* This makes sure the form groups inside a row take up equal space */
+.form-row .form-group {
+  flex: 1;
+}
