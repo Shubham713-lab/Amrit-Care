@@ -14,6 +14,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/order" element={<Order />} />
+          <Route path="/orders" element={<Order />} />
         </Routes>
       </main>
       <Footer />
