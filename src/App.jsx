@@ -13,7 +13,7 @@ function App() {
       <main className="pt-[100px] min-h-screen">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/order" element={<Order />} />
+
           <Route path="/orders" element={<Order />} />
         </Routes>
       </main>
