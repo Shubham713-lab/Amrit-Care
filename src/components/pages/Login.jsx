@@ -1,7 +1,7 @@
 // src/pages/LoginPage.jsx
 
 import React, { useState } from "react";
-import "../styles/Login.css"; // We will add a small update to this file too
+ // We will add a small update to this file too
 
 const LoginPage = () => {
   const [isLogin, setIsLogin] = useState(true);

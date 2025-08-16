@@ -25,7 +25,15 @@ function Header() {
     return () => window.removeEventListener('cartUpdated', handleCartUpdate);
   }, []);
 
-  const navLinks = ['Home', 'Order', 'About Us', 'Contact Us'];
+  // --- CHANGED HERE ---
+  // Using an array of objects for clearer navigation links and correct paths.
+  const navLinks = [
+    { name: 'Home', path: '/home' },
+    { name: 'Order', path: '/orders' }, // Correct path for the 'Order' link
+    { name: 'About Us', path: '/aboutus' },
+    { name: 'Contact Us', path: '/contactus' },
+    { name: 'SignUp', path: '/signup' },
+  ];
 
   return (
     <header className="fixed top-0 w-full z-50 bg-white shadow-md">
@@ -40,17 +48,18 @@ function Header() {
 
         {/* Center: Navigation - Desktop */}
         <nav className="hidden md:flex space-x-6 text-lg font-medium">
+          {/* --- UPDATED HERE --- */}
           {navLinks.map((link, idx) => (
             <NavLink
               key={idx}
-              to={`/${link.toLowerCase().replace(/\s/g, '')}`}
+              to={link.path} // Using the 'path' property from the object
               className={({ isActive }) =>
                 isActive
                   ? 'text-orange-500 border-b-2 border-orange-500 pb-1'
                   : 'text-gray-700 hover:text-orange-500 transition-colors'
               }
             >
-              {link}
+              {link.name} {/* Using the 'name' property for display */}
             </NavLink>
           ))}
         </nav>
@@ -96,10 +105,11 @@ function Header() {
       {isMenuOpen && (
         <div className="md:hidden bg-white shadow-md absolute top-full w-full left-0 py-4 px-6 z-40">
           <div className="flex flex-col space-y-4 text-lg font-medium">
+            {/* --- UPDATED HERE --- */}
             {navLinks.map((link, idx) => (
               <NavLink
                 key={idx}
-                to={`/${link.toLowerCase().replace(/\s/g, '')}`}
+                to={link.path} // Using the 'path' property
                 onClick={() => setIsMenuOpen(false)}
                 className={({ isActive }) =>
                   isActive
@@ -107,7 +117,7 @@ function Header() {
                     : 'text-gray-700 hover:text-orange-500 transition-colors'
                 }
               >
-                {link}
+                {link.name} {/* Using the 'name' property */}
               </NavLink>
             ))}
 
