@@ -39,7 +39,10 @@ function Header() {
     <header className="fixed top-0 w-full z-50 bg-white shadow-md">
       <div className="max-w-7xl mx-auto flex items-center justify-between px-4 py-3 md:py-4">
         {/* Left: Logo */}
-        <Link to="/home" className="text-3xl font-bold tracking-wide text-gray-900 flex items-center">
+        <Link
+          to="/"
+          className="text-3xl font-bold tracking-wide text-gray-900 flex items-center"
+        >
           <span className="text-orange-500">A</span>
           <span>mrit </span>
           <span className="text-orange-500">C</span>
@@ -73,7 +76,10 @@ function Header() {
           </div>
 
           {/* Profile */}
-          <NavLink to="/profile" className="hover:text-orange-500 transition-colors">
+          <NavLink
+            to="/profile"
+            className="hover:text-orange-500 transition-colors"
+          >
             <FaUser className="text-xl" />
           </NavLink>
 
