@@ -25,13 +25,21 @@ function Header() {
     return () => window.removeEventListener('cartUpdated', handleCartUpdate);
   }, []);
 
-  const navLinks = ['Home', 'Order', 'About Us', 'Contact Us'];
+  const navLinks = [
+    { name: 'Home', path: '/' },
+    { name: 'Order', path: '/order' },
+    { name: 'About Us', path: '/aboutus' },
+    { name: 'Contact Us', path: '/contactus' },
+  ];
 
   return (
     <header className="fixed top-0 w-full z-50 bg-white shadow-md">
       <div className="max-w-7xl mx-auto flex items-center justify-between px-4 py-3 md:py-4">
         {/* Left: Logo */}
-        <Link to="/home" className="text-3xl font-bold tracking-wide text-gray-900 flex items-center">
+        <Link
+          to="/"
+          className="text-3xl font-bold tracking-wide text-gray-900 flex items-center"
+        >
           <span className="text-orange-500">A</span>
           <span>mrit </span>
           <span className="text-orange-500">C</span>
@@ -43,14 +51,14 @@ function Header() {
           {navLinks.map((link, idx) => (
             <NavLink
               key={idx}
-              to={`/${link.toLowerCase().replace(/\s/g, '')}`}
+              to={link.path}
               className={({ isActive }) =>
                 isActive
                   ? 'text-orange-500 border-b-2 border-orange-500 pb-1'
                   : 'text-gray-700 hover:text-orange-500 transition-colors'
               }
             >
-              {link}
+              {link.name}
             </NavLink>
           ))}
         </nav>
@@ -64,7 +72,10 @@ function Header() {
           </div>
 
           {/* Profile */}
-          <NavLink to="/profile" className="hover:text-orange-500 transition-colors">
+          <NavLink
+            to="/profile"
+            className="hover:text-orange-500 transition-colors"
+          >
             <FaUser className="text-xl" />
           </NavLink>
 
@@ -99,7 +110,7 @@ function Header() {
             {navLinks.map((link, idx) => (
               <NavLink
                 key={idx}
-                to={`/${link.toLowerCase().replace(/\s/g, '')}`}
+                to={link.path}
                 onClick={() => setIsMenuOpen(false)}
                 className={({ isActive }) =>
                   isActive
@@ -107,7 +118,7 @@ function Header() {
                     : 'text-gray-700 hover:text-orange-500 transition-colors'
                 }
               >
-                {link}
+                {link.name}
               </NavLink>
             ))}
 

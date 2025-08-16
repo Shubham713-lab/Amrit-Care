@@ -1,9 +1,12 @@
 // src/pages/Home.jsx
+import React from "react";
+import HomeBanner from "./homebanner";
+
 export default function Home() {
   return (
-    <div style={{ padding: "2rem" }}>
-      <h1>Home Page</h1>
-      <p>Welcome to the Medicine Delivery Website!</p>
+    <div className="pt-[100px] px-8" style={{ paddingTop: '100px', padding: '2rem' }}>
+      <h1 className="text-3xl font-bold mb-4">Welcome to Amrit Care!</h1>
+      <p className="text-lg">This is the home page.</p>
     </div>
   );
 }
