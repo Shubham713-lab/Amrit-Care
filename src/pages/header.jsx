@@ -28,7 +28,7 @@ function Header() {
   // --- CHANGED HERE ---
   // Using an array of objects for clearer navigation links and correct paths.
   const navLinks = [
-    { name: 'Home', path: '/home' },
+    { name: 'Home', path: '/' },
     { name: 'Order', path: '/orders' }, // Correct path for the 'Order' link
     { name: 'About Us', path: '/aboutus' },
     { name: 'Contact Us', path: '/contactus' },
