@@ -30,11 +30,11 @@ const footer = () => {
                 {/* Logo */}
                 <div className="mb-4 text-2xl md:text-3xl font-bold">
                 <span className="text-orange-500">A</span>
-                            <span className="text-white">MRIT</span>
-                            <span className="text-orange-500">C</span>
-                        
+                            <span className="text-white">mrit</span>
 
-                            <span className="text-white">ARE</span>
+                            <span className="text-orange-500">C</span>
+                    
+                            <span className="text-white">are</span>
                 </div>
 
                 {/* Subscription Form */}
