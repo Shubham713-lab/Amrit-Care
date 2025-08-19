@@ -31,7 +31,6 @@ function Header() {
     { name: 'Home', path: '/' },
     { name: 'Order', path: '/orders' }, // Correct path for the 'Order' link
     { name: 'About Us', path: '/aboutus' },
-    { name: 'Contact Us', path: '/contactus' },
     { name: 'SignUp', path: '/signup' },
   ];
 
@@ -85,7 +84,7 @@ function Header() {
 
           {/* Cart */}
           <NavLink
-            to="/cart"
+            to="/itemcart"
             className="relative hover:text-orange-500 transition-colors"
           >
             <FaShoppingCart className="text-xl" />
