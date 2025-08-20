@@ -84,7 +84,7 @@ function Header() {
 
           {/* Cart */}
           <NavLink
-            to="/itemcart"
+            to="/cart"
             className="relative hover:text-orange-500 transition-colors"
           >
             <FaShoppingCart className="text-xl" />
